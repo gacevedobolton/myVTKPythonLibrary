@@ -1,3 +1,4 @@
-.kdev4
-.kateproject
-.kateproject.d
+*.kdev4
+*.kateproject
+*.kateproject.d
+*.pyc
