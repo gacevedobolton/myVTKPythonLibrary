@@ -18,6 +18,7 @@ def createArray(
         n_components=1,
         n_tuples=0,
         array_type="float",
+        init_to_zero=0,
         verbose=1):
 
     assert (type(array_type) in [type, str]), "array_type must be a type or a str. Aborting."
@@ -30,12 +31,14 @@ def createArray(
                        name=array_name,
                        n_components=n_components,
                        n_tuples=n_tuples,
+                       init_to_zero=init_to_zero,
                        verbose=verbose-1)
         elif (array_type == int):
             return myVTK.createIntArray(
                        name=array_name,
                        n_components=n_components,
                        n_tuples=n_tuples,
+                       init_to_zero=init_to_zero,
                        verbose=verbose-1)
     elif (type(array_type) is str):
         assert (array_type in ["double", "float", "int", "short"]), "if a str, array_type must be equal to double, float, int or short. Aborting."
@@ -45,16 +48,19 @@ def createArray(
                        name=array_name,
                        n_components=n_components,
                        n_tuples=n_tuples,
+                       init_to_zero=init_to_zero,
                        verbose=verbose-1)
         elif (array_type == "int"):
             return myVTK.createIntArray(
                        name=array_name,
                        n_components=n_components,
                        n_tuples=n_tuples,
+                       init_to_zero=init_to_zero,
                        verbose=verbose-1)
         elif (array_type == "short"):
             return myVTK.createShortArray(
                        name=array_name,
                        n_components=n_components,
                        n_tuples=n_tuples,
+                       init_to_zero=init_to_zero,
                        verbose=verbose-1)
