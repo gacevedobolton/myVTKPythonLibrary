@@ -6,6 +6,7 @@
 ###                                                                  ###
 ### University of California at San Francisco (UCSF), USA            ###
 ### Swiss Federal Institute of Technology (ETH), Zurich, Switzerland ###
+### École Polytechnique, Palaiseau, France                           ###
 ###                                                                  ###
 ########################################################################
 
