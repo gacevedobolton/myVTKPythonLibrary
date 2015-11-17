@@ -59,10 +59,10 @@ def splitDomainBetweenEndoAndEpi(
 
 if (__name__ == "__main__"):
     parser = argparse.ArgumentParser()
-    parser.add_argument('domain_filename', type=str)
+    parser.add_argument('domain_filename' , type=str              )
     parser.add_argument('--endLV_filename', type=str, default=None)
     parser.add_argument('--epiLV_filename', type=str, default=None)
-    parser.add_argument('-v', '--verbose', type=int, default=1)
+    parser.add_argument('--verbose', '-v' , type=int, default=1   )
     args = parser.parse_args()
 
     if (args.endLV_filename == None):
