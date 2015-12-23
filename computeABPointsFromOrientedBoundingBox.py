@@ -18,12 +18,12 @@ import myVTKPythonLibrary as myVTK
 ########################################################################
 
 def computeABPointsFromOrientedBoundingBox(
-        ugrid_wall,
+        mesh,
         verbose=1):
 
     myVTK.myPrint(verbose, "*** computeABPointsFromOrientedBoundingBox ***")
 
-    center = numpy.array(ugrid_wall.GetCenter())
+    center = numpy.array(mesh.GetCenter())
 
     res_corner = numpy.array([0.]*3)
     res_max = numpy.array([0.]*3)
@@ -32,7 +32,7 @@ def computeABPointsFromOrientedBoundingBox(
     res_size = numpy.array([0.]*3)
     obb_tree = vtk.vtkOBBTree()
     obb_tree.ComputeOBB(
-        ugrid_wall,
+        mesh,
         res_corner,
         res_max,
         res_mid,
