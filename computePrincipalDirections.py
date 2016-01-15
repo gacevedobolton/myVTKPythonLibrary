@@ -52,18 +52,18 @@ def computePrincipalDirections(
             matrix = numpy.reshape(matrix, (3,3), order='F')
 
         if (numpy.linalg.norm(matrix) > 1e-6):
-            #if (verbose): print indent(verbose) + 'k_tuple =', k_tuple
+            #if (verbose): print + 'k_tuple =', k_tuple
 
             val, vec = numpy.linalg.eig(matrix)
-            #if (verbose): print indent(verbose) + 'val =', val
-            #if (verbose): print indent(verbose) + 'vec =', vec
-            #if (verbose): print indent(verbose) + 'det =', numpy.linalg.det(vec)
+            #if (verbose): print + 'val =', val
+            #if (verbose): print + 'vec =', vec
+            #if (verbose): print + 'det =', numpy.linalg.det(vec)
             idx = val.argsort()
             val = val[idx]
             vec = vec[:,idx]
-            #if (verbose): print indent(verbose) + 'val =', val
-            #if (verbose): print indent(verbose) + 'vec =', vec
-            #if (verbose): print indent(verbose) + 'det =', numpy.linalg.det(vec)
+            #if (verbose): print + 'val =', val
+            #if (verbose): print + 'vec =', vec
+            #if (verbose): print + 'det =', numpy.linalg.det(vec)
 
             matrix_Lmin = [val[0]]
             matrix_Lmid = [val[1]]
