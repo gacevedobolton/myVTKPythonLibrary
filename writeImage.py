@@ -26,7 +26,7 @@ def writeImage(
     if ('vtk' in filename):
         image_writer = vtk.vtkImageWriter()
     elif ('vti' in filename):
-        image_writer = vtk.vtkXMLImageWriter()
+        image_writer = vtk.vtkXMLImageDataWriter()
     else:
         assert 0, "File must be .vtk or .vti. Aborting."
 
