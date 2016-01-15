@@ -70,6 +70,14 @@ def computePseudoProlateSpheroidalCoordinatesAndBasisForLV(
     farray_eCC = myVTK.createFloatArray("eCC", 3, n_points)
     farray_eLL = myVTK.createFloatArray("eLL", 3, n_points)
 
+    if (n_points == 0):
+        return (farray_rr,
+                farray_cc,
+                farray_ll,
+                farray_eRR,
+                farray_eCC,
+                farray_eLL)
+
     c_lst = [farray_c.GetTuple(k_point)[0] for k_point in xrange(n_points)]
     c_min = min(c_lst)
     c_max = max(c_lst)
